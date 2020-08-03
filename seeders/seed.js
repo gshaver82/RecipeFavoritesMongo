@@ -4,7 +4,7 @@ let db = require("../models/recipesModel");
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/recipes_DB", {
   useNewUrlParser: true,
   useFindAndModify: false,
-  // useUnifiedTopology: true
+  useUnifiedTopology: true
 });
 
 let recipesSeed = [
@@ -74,32 +74,26 @@ let recipesSeed = [
     ]
   }
 ];
-console.log(db);
-console.log(recipesSeed);
-// console.log(recipesSeed[0].date);
-// console.log(recipesSeed[0].ingredients);
-// console.log(recipesSeed[0].cookingActions);
-console.log(recipesSeed[0].cookingActions[0].ingredients);
-
 
 async function seedAsyncFunction() {
   try {
-    console.log("deleteMany");
     await db.deleteMany();
-    console.log("create");
     await db.insertMany(recipesSeed);
-    console.log("created");
-    await db.findOneAndUpdate(
-      {
-        recipeName: "pancake"
-      },
-      {
-        $set: {
-          recipeName: "new! pancake"
-        }
-      }
-    );   
-    console.log("findOneAndUpdated"); 
+    // console.log("seed files inserted");
+    //----------
+    //this is not needed for the seed, but tessted find and update and this works
+    // await db.findOneAndUpdate(
+    //   {
+    //     recipeName: "pancakes"
+    //   },
+    //   {
+    //     $set: {
+    //       recipeName: "new! pancake"
+    //     }
+    //   }
+    // );   
+    // console.log("findOneAndUpdated"); 
+    //----------
     process.exit(0);
   } catch (err) {
     console.log(err);
