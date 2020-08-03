@@ -15,11 +15,11 @@ const recipesSchema = new Schema({
     ingredients: [
         {
             //example flour
-            Name: String,
+            name: String,
             //example 2
             quantity: Number,
             //example cups
-            Units: String
+            units: String
         }
     ],
     cookingActions: [
@@ -33,11 +33,11 @@ const recipesSchema = new Schema({
             ingredients: [
                 {
                     //example flour
-                    Name: String,
+                    name: String,
                     //example 2
                     quantity: Number,
                     //example cups
-                    Units: String
+                    units: String
                 }
             ],
         }

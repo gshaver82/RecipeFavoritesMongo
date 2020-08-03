@@ -17,9 +17,94 @@
   <header>
     <h1>Favorite Recipe Cookbook</h1>
   </header>
-  <main>
-    <p>starter page</p>
-  </main>
+  <div class="ui container exercise">
+    <div class="ui raised card m-auto">
+      <h2>Add Your Recipe</h2>
+      <form action="POST">
+        
+        <div class="recipeName">
+          recipeName:
+          <input type="text" id="recipeName" placeholder="pancakes" />
+        </div>
+        <div class="Total ingredients">
+          <h2>Total Ingredients List</h2>
+
+          <h3>First ingredient</h3>
+          <div class="ingredient1">
+            ingredient1:
+            <input type="text" id="ingredient1" placeholder="sugar" />
+          </div>
+          <div class="quantity1">
+            quantity1:
+            <input type="number" id="quantity1" placeholder="3" />
+          </div>
+          <div class="unit1">
+            ingredient1:
+            <input type="text" id="unit1" placeholder="tablespoons" />
+          </div>
+
+          <h3>Second ingredient</h3>
+          <div class="ingredient2">
+            ingredient2:
+            <input type="text" id="ingredient2" placeholder="sugar" />
+          </div>
+          <div class="quantity2">
+            quantity2:
+            <input type="number" id="quantity2" placeholder="3" />
+          </div>
+          <div class="unit2">
+            ingredient2:
+            <input type="text" id="unit2" placeholder="tablespoons" />
+          </div>
+
+        </div>
+
+
+        <div class="cookingAction1">
+          <h2></h2>
+          <h2>Ingredients for the current action</h2>
+          <div class="CookingActionStep1">
+            <p>CookingAction:</p>            
+            <textarea type="text" id="CookingActionStep1" >
+              Place directions for cooking here. example:mix ingredients until super whipped and then refrigerate and wait 2 hours
+            </textarea>
+          </div>
+          <h3>First ingredient</h3>
+          <div class="ingredientStep1">
+            ingredient1:
+            <input type="text" id="ingredient1" placeholder="sugar" />
+          </div>
+          <div class="quantityStep1">
+            quantity1:
+            <input type="number" id="quantityStep1" placeholder="3" />
+          </div>
+          <div class="unit1">
+            ingredient1:
+            <input type="text" id="unitStep1" placeholder="tablespoons" />
+          </div>
+
+          <h3>Second ingredient</h3>
+          <div class="ingredient2Step1">
+            ingredient2:
+            <input type="text" id="ingredient2Step1" placeholder="sugar" />
+          </div>
+          <div class="quantity2Step1">
+            quantity2:
+            <input type="number" id="quantity2Step1" placeholder="3" />
+          </div>
+          <div class="unit2Step1">
+            ingredient2:
+            <input type="text" id="unit2Step1" placeholder="tablespoons" />
+          </div>
+
+          <div class="buttons">
+            <button disabled class="huge ui blue button complete">
+              Add Recipe
+            </button>
+          </div>
+      </form>
+    </div>
+  </div>
   </div>
   <script src="/index.js"></script>
 </body>

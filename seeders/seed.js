@@ -13,14 +13,14 @@ let recipesSeed = [
     recipeName: "pancakes",
     ingredients: [
       {
-        Name: "flour",
+        name: "flour",
         quantity: 2,
-        Units: "cups"
+        units: "cups"
       },
       {
-        Name: "eggs",
+        name: "eggs",
         quantity: 2,
-        Units: "Grade A egg"
+        units: "Grade A egg"
       },
     ],
     cookingActions: [
@@ -28,14 +28,14 @@ let recipesSeed = [
         action: "mix",
         ingredients: [
           {
-            Name: "flour",
+            name: "flour",
             quantity: 2,
-            Units: "cups"
+            units: "cups"
           },
           {
-            Name: "eggs",
+            name: "eggs",
             quantity: 2,
-            Units: "Grade A egg"
+            units: "Grade A egg"
           },
         ],
       }
@@ -45,14 +45,14 @@ let recipesSeed = [
     recipeName: "pancakes Alt recipe",
     ingredients: [
       {
-        Name: "flour",
+        name: "flour",
         quantity: 4,
-        Units: "cups"
+        units: "cups"
       },
       {
-        Name: "fake eggs",
+        name: "fake eggs",
         quantity: 8,
-        Units: "egg beaters"
+        units: "egg beaters"
       },
     ],
     cookingActions: [
@@ -60,14 +60,14 @@ let recipesSeed = [
         action: "mix",
         ingredients: [
           {
-            Name: "flour",
+            name: "flour",
             quantity: 4,
-            Units: "cups"
+            units: "cups"
           },
           {
-            Name: "fake eggs",
+            name: "fake eggs",
             quantity: 8,
-            Units: "egg beaters"
+            units: "egg beaters"
           },
         ],
       }
