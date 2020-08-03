@@ -1,5 +1,5 @@
 let mongoose = require("mongoose");
-let db = require("../models/recipesModel");
+let recipesModeldb = require("../models/recipesModel");
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/recipes_DB", {
   useNewUrlParser: true,
@@ -77,12 +77,12 @@ let recipesSeed = [
 
 async function seedAsyncFunction() {
   try {
-    await db.deleteMany();
-    await db.insertMany(recipesSeed);
+    await recipesModeldb.deleteMany();
+    await recipesModeldb.insertMany(recipesSeed);
     // console.log("seed files inserted");
     //----------
     //this is not needed for the seed, but tessted find and update and this works
-    // await db.findOneAndUpdate(
+    // await recipesModeldb.findOneAndUpdate(
     //   {
     //     recipeName: "pancakes"
     //   },
