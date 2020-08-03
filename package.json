@@ -1,0 +1,26 @@
+{
+  "name": "recipefavoritesmongo",
+  "version": "1.0.0",
+  "description": "This app will save your favorite recipes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gshaver82/RecipeFavoritesMongo.git"
+  },
+  "author": "Gene Shaver",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.3.16"
+  },
+  "bugs": {
+    "url": "https://github.com/gshaver82/RecipeFavoritesMongo/issues"
+  },
+  "homepage": "https://github.com/gshaver82/RecipeFavoritesMongo#readme"
+}
