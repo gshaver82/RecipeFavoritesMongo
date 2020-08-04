@@ -5,30 +5,34 @@ async function handleFormSubmit(event) {
 
     let recipeData = {
         recipeName:"default",
-        ingredients: [{}],
+        ingredients: [{},{}],
         cookingActions: [
             {
                 action:"default",
-                ingredients: [{}],
+                ingredients: [{},{}],
             },
         ],
     };
 
     recipeData.recipeName = document.querySelector("#recipeName").value.trim();
-    console.log(recipeData);
-    recipeData.ingredients[0].name = document.querySelector("#recipeName").value.trim();
-    recipeData.ingredients[0].quantity = document.querySelector("#recipeName").value.trim();
-    recipeData.ingredients[0].units = document.querySelector("#recipeName").value.trim();
+    
+    recipeData.ingredients[0].name = document.querySelector("#ingredient1").value.trim();
+    recipeData.ingredients[0].quantity = document.querySelector("#quantity1").value.trim();
+    recipeData.ingredients[0].units = document.querySelector("#unit1").value.trim();
 
-    recipeData.ingredients[0].name = document.querySelector("#recipeName").value.trim();
-    recipeData.ingredients[0].quantity = document.querySelector("#recipeName").value.trim();
-    recipeData.ingredients[0].units = document.querySelector("#recipeName").value.trim();
+    recipeData.ingredients[1].name = document.querySelector("#ingredient2").value.trim();
+    recipeData.ingredients[1].quantity = document.querySelector("#quantity2").value.trim();
+    recipeData.ingredients[1].units = document.querySelector("#unit2").value.trim();
 
-    recipeData.cookingActions[0].action = document.querySelector("#recipeName").value.trim();
+    recipeData.cookingActions[0].action = document.querySelector("#CookingActionStep1").value.trim();
 
-    recipeData.cookingActions[0].ingredients[0].name = document.querySelector("#recipeName").value.trim();
-    recipeData.cookingActions[0].ingredients[0].quantity = document.querySelector("#recipeName").value.trim();
-    recipeData.cookingActions[0].ingredients[0].units = document.querySelector("#recipeName").value.trim();
+    recipeData.cookingActions[0].ingredients[0].name = document.querySelector("#ingredient1Step1").value.trim();
+    recipeData.cookingActions[0].ingredients[0].quantity = document.querySelector("#quantity1Step1").value.trim();
+    recipeData.cookingActions[0].ingredients[0].units = document.querySelector("#unit1Step1").value.trim();
+
+    recipeData.cookingActions[0].ingredients[1].name = document.querySelector("#ingredient2Step1").value.trim();
+    recipeData.cookingActions[0].ingredients[1].quantity = document.querySelector("#quantity2Step1").value.trim();
+    recipeData.cookingActions[0].ingredients[1].units = document.querySelector("#unit2Step1").value.trim();
 
     console.log(recipeData);
 }
