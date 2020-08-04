@@ -4,18 +4,18 @@ async function handleFormSubmit(event) {
     console.log("inside button clicker");
 
     let recipeData = {
-        recipeName:"default",
-        ingredients: [{},{}],
+        recipeName: "default",
+        ingredients: [{}, {}],
         cookingActions: [
             {
-                action:"default",
-                ingredients: [{},{}],
+                action: "default",
+                ingredients: [{}, {}],
             },
         ],
     };
 
     recipeData.recipeName = document.querySelector("#recipeName").value.trim();
-    
+
     recipeData.ingredients[0].name = document.querySelector("#ingredient1").value.trim();
     recipeData.ingredients[0].quantity = document.querySelector("#quantity1").value.trim();
     recipeData.ingredients[0].units = document.querySelector("#unit1").value.trim();
@@ -35,7 +35,13 @@ async function handleFormSubmit(event) {
     recipeData.cookingActions[0].ingredients[1].units = document.querySelector("#unit2Step1").value.trim();
 
     console.log(recipeData);
+    
+    $.ajax({
+        url: "/api/create",
+        data: recipeData,
+        method: "POST",
+    });
+    alert("recipe Added");
 }
-
 
 document.querySelector(".addRecipeButton").addEventListener("click", handleFormSubmit);

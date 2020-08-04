@@ -1,5 +1,4 @@
 const recipesModeldb = require("../models/recipesModel");
-var path = require("path");
 
 module.exports = function (app) {
     app.get("/jsonall", async (req, res) => {
@@ -11,4 +10,13 @@ module.exports = function (app) {
         }
     });
 
+
+    app.post("/api/create", async (req, res) => {
+        try {
+            await recipesModeldb.create(req.body);
+            console.log("API inserted recipe");
+        } catch (err) {
+            console.log(err);
+        }
+    });
 };
