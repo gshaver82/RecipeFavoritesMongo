@@ -5,7 +5,7 @@ module.exports = function (app) {
     
     app.get("/jsonall", async (req, res) => {
         try {
-            data = await recipesModeldb.find({})
+            data = await recipesModel.find({})
             res.json(data);
         } catch (err) {
             console.log(err);
