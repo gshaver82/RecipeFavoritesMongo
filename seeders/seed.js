@@ -1,7 +1,7 @@
 let mongoose = require("mongoose");
 let recipesModeldb = require("../models/recipesModel");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/recipes_DB", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/firstrecipes_DB", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true

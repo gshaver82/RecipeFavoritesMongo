@@ -45,6 +45,6 @@ const recipesSchema = new Schema({
 }
 );
 
-const Workout = mongoose.model("recipes_DB", recipesSchema);
+const Workout = mongoose.model("firstrecipes_DB", recipesSchema);
 
 module.exports = Workout;
